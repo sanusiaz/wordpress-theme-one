@@ -9,7 +9,9 @@
     get_header();
 ?>
 
-Main Contents
+<main>
+    Main Contents
+</main>
 
 <?php
     get_footer();

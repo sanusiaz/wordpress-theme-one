@@ -2,6 +2,8 @@
     wp_footer();
 ?>
 
-footer contents
+<footer>
+    footer contents
+</footer>
 </body>
 </html>

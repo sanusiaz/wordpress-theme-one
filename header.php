@@ -9,15 +9,25 @@
 
 
 <!DOCTYPE html>
-<html>
+<html lang="<?= language_attributes(  );?>">
 <head>
-    <meta charset="utf-8">
+    <meta charset="<?= bloginfo('charset');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 
     <?php wp_head();?>
 </head>
-<body>
+<body <?= body_class( 'bg-blue-200' );?>>
 
-    Header contents
+    <?php
+
+        if ( function_exists('wp_body_open') )
+        {
+            wp_body_open();
+        }
+    ?>
+
+    <header>
+        <?php get_template_part( 'template-parts/header' )?>
+    </header>
 
