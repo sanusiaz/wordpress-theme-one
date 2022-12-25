@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "tailwindcss": "^3.2.4"
+  },
+  "name": "wordpress-theme-1",
+  "description": "",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "devDependencies": {},
+  "scripts": {
+    "build-tailwind": "npx tailwindcss -i ./css/input.css -o ./style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
