@@ -6,7 +6,7 @@
      * @author https://github.com/sanusiaz
      */
     
-    namespace THEMEONE\Traits;
+    namespace THEME_ONE\Inc\Traits;
 
     trait Singleton {
         public function __construct()
@@ -24,7 +24,7 @@
          * Get CLass Instance 
          * @return [called_class] [instance of called class]
          */
-        final public function get_instance()
+        final public static function get_instance()
         {
             static $instance = [];
 
@@ -32,9 +32,9 @@
 
             if ( !isset($instance[$called_class]) )
             {
-                $instance[$called_class] = $called_class;
+                $instance[$called_class] = new $called_class;
 
-                do_action(sprintf("themeone_theme_singleton_init%s", $called_class));
+                do_action(sprintf("theme_one_singleton_init%s", $called_class));
             }
             return $instance[$called_class];
         }

@@ -2,10 +2,10 @@
 /**
  * Autoloader file for theme.
  *
- * @package ThemeOne
+ * @package THEME_ONE
  */
 
-namespace THEMEONE\Inc\Helpers;
+namespace THEME_ONE\Inc\Helpers;
 
 /**
  * Auto loader function.
@@ -16,7 +16,7 @@ namespace THEMEONE\Inc\Helpers;
  */
 function autoloader( $resource = '' ) {
     $resource_path  = false;
-    $namespace_root = 'THEMEONE\\';
+    $namespace_root = 'THEME_ONE\\';
     $resource       = trim( $resource, '\\' );
 
     if ( empty( $resource ) || strpos( $resource, '\\' ) === false || strpos( $resource, $namespace_root ) !== 0 ) {
@@ -68,7 +68,7 @@ function autoloader( $resource = '' ) {
                 break;
         }
 
-        $resource_path = sprintf( '%s/inc/%s/%s.php', untrailingslashit( AQUILA_DIR_PATH ), $directory, $file_name );
+        $resource_path = sprintf( '%s/inc/%s/%s.php', untrailingslashit( THEME_ONE_DIR_PATH ), $directory, $file_name );
 
     }
 
@@ -84,4 +84,4 @@ function autoloader( $resource = '' ) {
 
 }
 
-spl_autoload_register( '\THEMEONE\Inc\Helpers\autoloader' );
+spl_autoload_register( '\THEME_ONE\Inc\Helpers\autoloader' );
