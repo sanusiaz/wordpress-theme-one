@@ -16,6 +16,7 @@
 
 
 /**[ === TAILWIND CSS STYLING START === ]**/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
