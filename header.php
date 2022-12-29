@@ -27,7 +27,14 @@
         }
     ?>
 
-    <header>
-        <?php get_template_part( 'template-parts/header' )?>
+    <header class="flex justify-between p-2 px-5 items-center w-full">
+        <?php
+
+            if ( function_exists('the_custom_logo') )
+            {
+                the_custom_logo(  );
+            }
+        ?>
+        <?php get_template_part( 'template-parts/header/nav' )?>
     </header>
 
